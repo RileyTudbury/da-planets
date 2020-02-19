@@ -12,20 +12,19 @@ class GalaxiesService {
 
 
   async findById(id) {
-    throw new Error("Method not implemented.");
+    return await _repository.findById(id)
   }
 
-  async create(body) {
-    throw new Error("Method not implemented.");
+  async create(data) {
+    return await _repository.create(data)
   }
 
-
-  async update(id, body) {
-    throw new Error("Method not implemented.");
+  async update(id, update) {
+    return await _repository.findByIdAndUpdate(id, update, { new: true })
   }
 
   async delete(id) {
-    throw new Error("Method not implemented.");
+    await _repository.findByIdAndDelete(id)
   }
 
 }
