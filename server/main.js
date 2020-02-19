@@ -38,11 +38,13 @@ server.use(bp.json());
 import GalaxiesController from "./controllers/GalaxiesController";
 import StarsController from "./controllers/StarsController"
 import PlanetsController from "./controllers/PlanetsController"
+import MoonsController from "./controllers/MoonsController"
 
 //NOTE remember the forward slash at the start of your path!
 server.use("/api/galaxies", new GalaxiesController().router);
 server.use("/api/stars", new StarsController().router)
 server.use("/api/planets", new PlanetsController().router)
+server.use("/api/moons", new MoonsController().router)
 
 //NOTE Everything below this line always stays the same
 
