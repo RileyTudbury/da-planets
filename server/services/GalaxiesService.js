@@ -5,11 +5,9 @@ const _repository = mongoose.model("Galaxy", Galaxy);
 
 class GalaxiesService {
 
-
   async getAll() {
     return await _repository.find({});
   }
-
 
   async findById(id) {
     return await _repository.findById(id)
