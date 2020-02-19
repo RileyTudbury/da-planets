@@ -54,7 +54,7 @@ export default class MoonsController {
   async delete(req, res, next) {
     try {
       await MoonsService.delete(req.params.id)
-      res.send("You just deleted an entire star")
+      res.send("You just deleted an entire moon")
     } catch (error) {
       next(error)
     }

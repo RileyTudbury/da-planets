@@ -54,7 +54,7 @@ export default class PlanetsController {
   async delete(req, res, next) {
     try {
       await PlanetsService.delete(req.params.id)
-      res.send("You just deleted an entire star")
+      res.send("You just deleted an entire planet")
     } catch (error) {
       next(error)
     }
